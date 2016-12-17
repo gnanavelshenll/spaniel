@@ -1,5 +1,9 @@
 # spaniel Changelog
 
+### 3.0.0 (December 16, 2016)
+
+Fix `rootMargin` [sign bug](https://github.com/linkedin/spaniel/issues/24). Positive `rootMargin` values should expand the offset. This is a breaking change for anyone currently setting `rootMargin`.
+
 ### 2.1.0 (November 17, 2016)
 
 Add api for one-time determining an element's viewport state

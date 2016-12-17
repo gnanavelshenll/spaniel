@@ -1,7 +1,7 @@
 /*
-Copyright 2016 LinkedIn Corp. Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.  You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
- 
-Unless required by applicable law or agreed to in writing, software  distributed under the License is distributed on an "AS IS" BASIS,  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+Copyright 2016 LinkedIn Corp. Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 */
 
 import {
@@ -203,10 +203,10 @@ export function entrySatisfiesRatio(entry: IntersectionObserverEntry, threshold:
 
 export function generateEntry(frame: Frame, bcr: ClientRect, el: Element, rootMargin: DOMMargin) {
   let rootBounds: DOMRectInit = {
-    x: rootMargin.left,
-    y: rootMargin.top,
-    width: frame.width - (rootMargin.right + rootMargin.left),
-    height: frame.height - (rootMargin.bottom + rootMargin.top)
+    x: -rootMargin.left,
+    y: -rootMargin.top,
+    width: frame.width + (rootMargin.right + rootMargin.left),
+    height: frame.height + (rootMargin.bottom + rootMargin.top)
   };
 
   let intersectX = Math.max(rootBounds.x, bcr.left);
